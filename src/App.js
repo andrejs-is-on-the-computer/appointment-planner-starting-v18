@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate } from "react-router-dom"
 import Root, { ROUTES } from "./components/root/Root";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
@@ -16,12 +16,27 @@ function App() {
   Implement functions to add data to
   contacts and appointments
   */
-  const addContact = (newCon) => {
-    setContacts(contacts => [...contacts, newCon]);
+  const addContact = (new_contact) => {
+    setContacts((prev_contacts)=>{
+      const contact = {
+        name : new_contact.name,
+        phonenumber : new_contact.phonenumber,
+        email: new_contact.email
+      };
+      return [...prev_contacts, contact];
+    })
   };
 
-  const addAppointment = (newApt) => {
-    setAppointments(appointments => [...appointments, newApt]);
+  const addAppointment = (new_app) => {
+    setContacts((prev_appointments)=>{
+      const appointment = {
+        title : new_app.title,
+        contact: new_app.contact,
+        date: new_app.date,
+        time: new_app.time
+      };
+      return [...prev_appointments, appointment];
+    });
   };
 
   const router = createBrowserRouter(createRoutesFromElements(
