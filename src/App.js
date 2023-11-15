@@ -11,7 +11,6 @@ function App() {
   */
   const [contacts, setContacts] = useState([]);
   const [appointments, setAppointments] = useState([]);
-
   /*
   Implement functions to add data to
   contacts and appointments
