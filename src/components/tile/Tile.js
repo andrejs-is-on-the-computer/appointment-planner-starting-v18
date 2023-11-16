@@ -2,6 +2,7 @@ import React from "react";
 
 export const Tile = (props) => {
  const values =  Object.values(props.object);
+ console.log(values);
   return (
     <div className="tile-container">
       {
@@ -14,6 +15,8 @@ export const Tile = (props) => {
           }
         })
       }
+       
+      
     </div>
   );
 };
