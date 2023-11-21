@@ -15,8 +15,6 @@ export const Tile = (props) => {
           }
         })
       }
-       
-      
     </div>
   );
 };

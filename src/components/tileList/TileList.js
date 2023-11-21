@@ -9,8 +9,6 @@ export const TileList = (props) => {
         <Tile object = {object} key = {index} />
       )
     }
-    gdsad
-    
     </div>
   );
   
